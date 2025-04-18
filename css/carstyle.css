@@ -1,0 +1,164 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #000;
+  padding: 20px 40px;
+  color: #fff;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.flex-container,
+.flex-container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icons i {
+  margin-left: 30px;
+  color: #f5c518;
+  font-size: 16px;
+}
+
+nav.menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px 0;
+  padding: 0;
+}
+
+nav.menu ul li {
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav.menu ul li:hover {
+  text-decoration: underline;
+}
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.itemsflex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.content-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay,
+.card:hover .content-box {
+  opacity: 1;
+}
+
+.content-box h5 {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: #f5c518;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e0b60f;
+}
+
+@media (max-width: 520px) {
+  .flex-container,
+  .flex-container2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.menu ul {
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel-inner img {
+    height: 250px;
+  }
+}
