@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s;
+  user-select: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url("https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg?t=st=1744565555~exp=1744569155~hmac=d465f86cc81e85178b2aa07b8e425931c46a79e0472a5b4e3b387c3b20d0808e&w=1380");
+  background-size: cover;
+  position: relative;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 20px #000, inset 0 0 80px #000;
+}
+
+.logo {
+  width: 120px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  filter: drop-shadow(0 0 25px #000);
+}
+
+form {
+  width: 350px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 80px 40px;
+  color: #fff;
+}
+
+form h3 {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.8em;
+}
+
+form .inputbox {
+  margin: 25px 0;
+  position: relative;
+}
+
+form .inputbox .msg {
+  font-size: 0.7em;
+  margin-top: 5px;
+  color: #f00;
+}
+
+form .inputbox label {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+  padding: 5px 15px;
+  width: auto;
+  font-size: 0.75em;
+  user-select: none;
+  color: #eee;
+  background: #cc0202;
+  border-radius: 20px;
+}
+
+form .inputbox input {
+  border: none;
+  outline: none;
+  padding: 15px 15px;
+  width: 100%;
+  font-size: 1em;
+  user-select: none;
+  outline: 2px solid #cc0202;
+  border-radius: 5px;
+  background: #111;
+  color: #fff;
+}
+
+form .inputbox input:focus {
+  background: #222;
+}
+
+form .submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #eee;
+  background: #cc0202;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form .submit:hover {
+  background: #222;
+  box-shadow: 0 0 20px #000;
+}
+
+form .helpBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  color: #777;
+  font-size: 0.95em;
+}
+
+form .helpBox a {
+  color: #777;
+}
+
+form .helpBox a:hover {
+  text-decoration: underline;
+}
+
+form .sign {
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: #666;
+  font-family: Geneva, sans-serif;
+}
+
+form .sign a {
+  color: #fff;
+}
+
+form .sign a:hover {
+  text-decoration: underline;
+}
+
+form .msg {
+  font-size: 0.75em;
+  color: #555;
+}
+
+.fa-youtube-play {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: rgba(255, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.fa-youtube-play a {
+  text-decoration: none;
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.fa-youtube-play a:hover {
+  color: rgba(255, 0, 0, 0.75);
+}
+
+#rem {
+  accent-color: #cc0202;
+}
+.fontstyle{
+    font-family: Geneva, sans-serif;
+    
+}
