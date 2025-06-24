@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/glightbox.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Big Cars</title>
+</head>
+<body>
+   <header class="hero-box">
+      <div class="flex-container">
+        <div class="logo">
+         <img src="/img/High Wheels.png" alt="Logo" />
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-phone"> +91 9167305752</i>
+          <i class="fa-solid fa-location-dot"> Location</i>
+        </div>
+      </div>
+
+      <div class="flex-container2">
+        <nav class="menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item dropdown">
+              <a href="carpage.html" class="nav-link ">Inventory</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link">Models</a></li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-link">Events <i class="bx bx-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="nav-link">Recent Jobs</a></li>
+                <li><a href="#" class="nav-link">Best Jobs</a></li>
+                <li><a href="#" class="nav-link">Work Awards</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Company Info</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <div class="form-section">
+    <h1>Contact Us</h1>
+    <p class="form-intro">We would love to hear from you! Please fill out the form below.</p>
+
+    <form class="form-container">
+      <div class="form-group">
+        <label>Name</label>
+        <input name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <div style="display: flex;">
+          <select name="countryCode" style="margin-right: 5px;">
+            <option value="+1">+1 (USA)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+91">+91 (India)</option>
+            <option value="+61">+61 (Australia)</option>
+            <option value="+49">+49 (Germany)</option>
+          </select>
+          <input type="tel" name="phone" style="flex: 1;" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>City</label>
+        <input name="city" />
+      </div>
+
+      <div class="form-group">
+        <label>Car Model</label>
+        <input name="carModel" />
+      </div>
+
+      <div class="form-group">
+        <label>Interest (Rent/Test Drive)</label>
+        <input name="interest" />
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send</button>
+      <p class="text-sm mt-2">Status message here...</p>
+    </form>
+  </div>
+</body>
+</html>

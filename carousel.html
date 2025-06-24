@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Carousel</title>
+  <link rel="stylesheet" href="css/carousel.css" />
+</head>
+<body>
+
+  <div class="banner" id="carouselBanner">
+    <div class="slider" id="carouselSlider" style="--quantity: 10;">
+      <div class="items" style="--position: 1;">
+        <a href="#">
+          <img src="img/image-1.jpg" alt="Image 1" />
+        </a>
+      </div>
+      <div class="items" style="--position: 2;">
+        <a href="#">
+          <img src="img/image-2.jpg" alt="Image 2" />
+        </a>
+      </div>
+      <div class="items" style="--position: 3;">
+        <a href="#">
+          <img src="img/image-3.jpg" alt="Image 3" />
+        </a>
+      </div>
+      <div class="items" style="--position: 4;">
+        <a href="#">
+          <img src="img/image-4.jpg" alt="Image 4" />
+        </a>
+      </div>
+      <div class="items" style="--position: 5;">
+        <a href="#">
+          <img src="img/image-5.jpg" alt="Image 5" />
+        </a>
+      </div>
+      <div class="items" style="--position: 6;">
+        <a href="#">
+          <img src="img/image-6.jpg" alt="Image 6" />
+        </a>
+      </div>
+      <div class="items" style="--position: 7;">
+        <a href="#">
+          <img src="img/image-7.jpg" alt="Image 7" />
+        </a>
+      </div>
+      <div class="items" style="--position: 8;">
+        <a href="#">
+          <img src="img/image-8.jpg" alt="Image 8" />
+        </a>
+      </div>
+      <div class="items" style="--position: 9;">
+        <a href="#">
+          <img src="img/img1.jpg" alt="Image 9" />
+        </a>
+      </div>
+      <div class="items" style="--position: 10;">
+        <a href="#">
+          <img src="img/img2.jpg" alt="Image 10" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('carouselSlider');
+    const banner = document.getElementById('carouselBanner');
+    let currentAngle = 0;
+    let isDragging = false;
+    let lastX = 0;
+    let velocity = 0;
+
+    function rotate() {
+      slider.style.transform = `translateX(-50%) rotateY(${currentAngle}deg)`;
+      requestAnimationFrame(rotate);
+    }
+    rotate();
+
+    banner.addEventListener('mousedown', e => {
+      isDragging = true;
+      lastX = e.clientX;
+      velocity = 0;
+      banner.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      const deltaX = e.clientX - lastX;
+      velocity = deltaX * 0.3;
+      currentAngle += velocity;
+      lastX = e.clientX;
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      banner.style.cursor = 'grab';
+    });
+
+    // Touch support
+    banner.addEventListener('touchstart', e => {
+      isDragging = true;
+      lastX = e.touches[0].clientX;
+      velocity = 0;
+      banner.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('touchmove', e => {
+      if (!isDragging) return;
+      const deltaX = e.touches[0].clientX - lastX;
+      velocity = deltaX * 0.3;
+      currentAngle += velocity;
+      lastX = e.touches[0].clientX;
+    });
+
+    document.addEventListener('touchend', () => {
+      isDragging = false;
+      banner.style.cursor = 'grab';
+    });
+  </script>
+
+</body>
+</html>

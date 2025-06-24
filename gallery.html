@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/glightbox.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/gallery.css">
+    
+ 
+    <title>Big Cars</title>
+  </head>
+  <body class="hero-body">
+    <header class="hero-box">
+      <div class="flex-container">
+        <div class="logo">
+          <img src="/img/High Wheels.png" alt="Logo" />
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-phone"> +91 9167305752</i>
+          <i class="fa-solid fa-location-dot"> Location</i>
+        </div>
+      </div>
+
+      <div class="flex-container2">
+        <nav class="menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item dropdown">
+              <a href="carpage.html" class="nav-link ">Inventory</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link">Models</a></li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-link">Events <i class="bx bx-chevron-down dropdown-icon"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="nav-link">Recent Jobs</a></li>
+                <li><a href="#" class="nav-link">Best Jobs</a></li>
+                <li><a href="#" class="nav-link">Work Awards</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Company Info</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+  <div class="filter-bar">
+    <label for="brandSelect">Filter by Brand:</label>
+    <select id="brandSelect">
+      <option value="All">All</option>
+    </select>
+
+    <label for="yearSelect">Filter by Year:</label>
+    <select id="yearSelect">
+      <option value="All">All</option>
+    </select>
+  </div>
+
+  <div class="gallery" id="carGallery"></div>
+  <!-- Footer -->
+<footer style="
+  background-color: black;
+  padding: 1.4rem;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+">
+  © 2025 Copyright: High Wheels
+</footer>
+
+  <script>
+  const cars = [
+  {
+    brand: "Lamborghini",
+    year: 2019,
+    title: "2019 Lamborghini Urus",
+    desc: "Luxury SUV with performance.",
+    image: "https://www.lamborghinigoldcoast.com/imagetag/7270/2/l/Used-2019-Lamborghini-Urus-1740764142.jpg"
+  },
+  {
+    brand: "Ferrari",
+    year: 2021,
+    title: "2021 Ferrari Roma",
+    desc: "Timeless design meets modern performance.",
+    image: "https://www.lamborghinigoldcoast.com/imagetag/11820/2/l/Used-2021-Ferrari-Roma-1746293442.jpg"
+  },
+  {
+    brand: "Mercedes",
+    year: 2021,
+    title: "2021 Mercedes-Benz G-Class AMG G 63",
+    desc: "Luxury off-road SUV with AMG power.",
+    image: "https://www.lamborghinigoldcoast.com/imagetag/11333/2/l/Used-2021-Mercedes-Benz-G-Class-AMG-G-63-1741812758.jpg"
+  },
+  {
+    brand: "Rolls-Royce",
+    year: 2020,
+    title: "2020 Rolls-Royce Phantom",
+    desc: "Ultimate luxury sedan.",
+    image: "https://www.lamborghinigoldcoast.com/imagetag/9515/2/l/Used-2020-Rolls-Royce-Phantom-1707862837.jpg"
+  },
+  {
+    brand: "Bentley",
+    year: 2020,
+    title: "2020 Bentley Continental GT W12",
+    desc: "A luxury grand tourer.",
+    image: "https://www.lamborghinigoldcoast.com/imagetag/10595/2/l/Used-2020-Bentley-Continental-GT-GT-W12-1740766143.jpg"
+  }
+];
+
+// Sort by brand
+cars.sort((a, b) => a.brand.localeCompare(b.brand));
+
+// DOM elements
+const gallery = document.getElementById("carGallery");
+const brandSelect = document.getElementById("brandSelect");
+const yearSelect = document.getElementById("yearSelect");
+
+// Populate filters
+const brands = ["All", ...new Set(cars.map(car => car.brand))];
+const years = ["All", ...new Set(cars.map(car => car.year))];
+
+brands.forEach(brand => {
+  const option = document.createElement("option");
+  option.value = brand;
+  option.textContent = brand;
+  brandSelect.appendChild(option);
+});
+
+years.forEach(year => {
+  const option = document.createElement("option");
+  option.value = year;
+  option.textContent = year;
+  yearSelect.appendChild(option);
+});
+
+function renderGallery() {
+  const brandFilter = brandSelect.value;
+  const yearFilter = yearSelect.value;
+
+  const filteredCars = cars.filter(car => {
+    const brandMatch = brandFilter === "All" || car.brand === brandFilter;
+    const yearMatch = yearFilter === "All" || car.year == yearFilter;
+    return brandMatch && yearMatch;
+  });
+
+  gallery.innerHTML = "";
+
+  filteredCars.forEach(car => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${car.image}" alt="${car.title}" />
+      <div class="card-content">
+        <h3>${car.title}</h3>
+        <p>${car.desc}</p>
+        <p><strong>${car.year}</strong> • ${car.brand}</p>
+      </div>
+    `;
+    gallery.appendChild(card);
+  });
+}
+
+// Initial render
+renderGallery();
+brandSelect.addEventListener("change", renderGallery);
+yearSelect.addEventListener("change", renderGallery);</script>
+</body>
+</html>

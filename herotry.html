@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *{
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+
+        font-family: "PT Sans Caption", "Helvetica Neue", Arial, Helvetica,
+          Audiowide, sans-serif;
+        font-size: 3vh;
+      }
+
+      #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #logo {
+        text-decoration: none;
+        color: white;
+        font-size: 5vh;
+        font-weight: bold;
+      }
+
+      #menu-icon {
+        font-family: Geneva, sans-serif;
+        font-size: 6vh;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        padding: 1em;
+        box-sizing: border-box;
+        color: white;
+        background: url(https://www.topgear.com/sites/default/files/2024/04/1985-Ferrari-288-GTO1465536_.jpg?w=1784&h=1004)
+          center center no-repeat;
+        background-size: cover;
+        font-family: "Audiowide";
+      }
+
+      .hero-title {
+        max-width: 16em;
+        margin: 0;
+        font-size: 12vh;
+        font-weight: bold;
+        line-height: 0.9;
+      }
+
+      @media only screen and (min-width: 32em) {
+        .hero-title {
+          font-size: 16vh;
+        }
+      }
+
+      .hero-footer {
+        display: flex;
+        margin-bottom: 1em;
+      }
+
+      .button {
+        padding: 0.5em 0.67em;
+        color: white;
+        text-decoration: none;
+        border: 0.1em solid white;
+      }
+
+      .button-primary {
+        color: black;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <header id="header">
+        <a id="logo" href="#">logo</a>
+        <nav>
+          <a id="menu-icon">&#8801;</a>
+        </nav>
+      </header>
+      <header class="hero-header">
+        <h1 class="hero-title">Feel the Power</h1>
+      </header>
+      <footer class="hero-footer">
+        <a class="button button-primary" href="#">list of cards</a>
+        <a class="button" href="#">rent</a>
+      </footer>
+    </section>
+  </body>
+  <link rel="stylesheet" href="assets/js/newhero.js">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>
