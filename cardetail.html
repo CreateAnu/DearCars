@@ -26,95 +26,89 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/cardetails.css">
+    <link rel="stylesheet" href="css/cardetails.css" />
     <title>Big Cars</title>
   </head>
   <body class="hero-body">
-    <header class="hero-box">
-      <div class="flex-container">
-        <div class="logo">
-          <img src="/img/High Wheels.png" alt="Logo" />
-        </div>
-        <div class="icons">
-          <i class="fa-solid fa-phone"> +91 9167305752</i>
-          <i class="fa-solid fa-location-dot"> Location</i>
-        </div>
+  <header class="hero-box">
+    <div class="flex-container"> 
+      <div class="logo">
+        <img src="/img/High Wheels.png" alt="Logo" />
       </div>
-
-      <div class="flex-container2">
-        <nav class="menu">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="carpage.html" class="nav-link">Inventory</a>
-            </li>
-            <li class="nav-item">
-              <a href="gallery.html" class="nav-link">Models</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-link"
-                >Events <i class="bx bx-chevron-down dropdown-icon"></i
-              ></a>
-              <ul class="dropdown-menu">
-                <li><a href="#" class="nav-link">Recent Jobs</a></li>
-                <li><a href="#" class="nav-link">Best Jobs</a></li>
-                <li><a href="#" class="nav-link">Work Awards</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Company Info</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
-          <li data-target="#myCarousel" data-slide-to="4"></li>
-          <li data-target="#myCarousel" data-slide-to="5"></li>
-        </ol>
-
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/2/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 1" />
-          </div>
-          <div class="item"><img src="https://www.lamborghinigoldcoast.com/imagetag/7270/4/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 2" /></div>
-          <div class="item"><img src="https://www.lamborghinigoldcoast.com/imagetag/7270/5/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 3" /></div>
-          <div class="item"><img src="https://www.lamborghinigoldcoast.com/imagetag/7270/8/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 4" /></div>
-          <div class="item"><img src="https://www.lamborghinigoldcoast.com/imagetag/7270/13/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 5" /></div>
-          <div class="item"><img src="https://www.lamborghinigoldcoast.com/imagetag/7270/17/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 6" /></div>
-          <div class="item"><img src="https://www.lamborghinigoldcoast.com/imagetag/7270/31/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 6" /></div>
-        </div>
-
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
+      <div class="icons">
+        <i class="fa-solid fa-phone"> +91 9167305752</i>
+        <i class="fa-solid fa-location-dot"> Location</i>
       </div>
     </div>
-    <footer
-      style="
-        background-color: black;
-        padding: 1.4rem;
-        font-family: sans-serif;
-        text-align: center;
-        color: white;
-      "
-    >
-      © 2025 Copyright: High Wheels
-    </footer>
+    <div class="hamburger-wrap">
+      <button class="hamburger-btn" id="hamburgerBtn">&#9776;</button>
+    </div>
+    <div class="flex-container2" id="navMenu">
+      <nav class="menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="carpage.html" class="nav-link">Inventory</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Models</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-link">Events <i class="bx bx-chevron-down dropdown-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="nav-link">Recent Jobs</a></li>
+              <li><a href="#" class="nav-link">Best Jobs</a></li>
+              <li><a href="#" class="nav-link">Work Awards</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Company Info</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="content-wrap">
+    <div id="myCarousel" class="carousel slide carousel-half" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/2/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 1" />
+        </div>
+        <div class="item">
+          <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/4/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 2" />
+        </div>
+        <div class="item">
+          <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/5/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 3" />
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+
+    <div class="info-section">
+      <h2>2019 Lamborghini Urus</h2>
+      <p><strong>Brand:</strong> Lamborghini</p>
+      <p><strong>Description:</strong> A high-performance luxury SUV combining Lamborghini's signature design with everyday practicality.</p>
+      <p><strong>Engine:</strong> 4.0L Twin-Turbo V8</p>
+      <p><strong>Transmission:</strong> 8-Speed Automatic</p>
+      <p><strong>Horsepower:</strong> 641 HP</p>
+      <p><strong>0–60 mph:</strong> 3.6 sec</p>
+      <p><strong>Year:</strong> 2019</p>
+      <p><strong>Model:</strong> Urus</p>
+      <p><strong>Top Speed:</strong> 190 mph</p>
+      <p><strong>Price:</strong> $200,000</p>
+    </div>
+  </div>
+
+  <footer style="background-color: black; padding: 1.4rem; font-family: sans-serif; text-align: center; color: white;">
+    © 2025 Copyright: High Wheels
+  </footer>
 
     <script src="/js/menumove.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
