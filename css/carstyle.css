@@ -181,34 +181,101 @@ body {
   background: gold;
   color: black;
 }
+.flex-container2 {
+    display: flex;
+    justify-content: center;
+}
 
-/* Responsive */
+.hamburger-wrap {
+    display: none;
+}
+
+.flex-container2 {
+    display: flex;
+    flex-direction: row;
+}
+
 @media (max-width: 768px) {
-  .nav-list {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+    .flex-container {
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  .itemsflex {
-    flex-direction: column;
-    align-items: center;
-  }
+    .hamburger-wrap {
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
 
-  .card {
-    width: 90%;
-  }
+    .hamburger-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
 
-  .carousel-inner img {
-    height: 300px;
-  }
-}
-.card .overlay,
-.card .content-box {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
+    .flex-container2 {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 130px;
+        left: 0;
+        background-color: #333;
+        z-index: 1000;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
 
-.card:hover .overlay,
-.card:hover .content-box {
-  opacity: 1;
+    .flex-container2.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-item {
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #555;
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px 0;
+        color: gold;
+        text-decoration: none;
+    }
+
+    
+
+    .dropdown-menu {
+        display: none;
+        position: static;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        padding-left: 20px;
+        box-shadow: none;
+    }
+
+    .nav-item.dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-icon {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item.dropdown.active .dropdown-icon {
+        transform: rotate(180deg);
+    }
 }
