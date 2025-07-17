@@ -1,33 +1,39 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
 
-  // Get all dropdown links
-  const dropdownLinks = document.querySelectorAll('.dropdown-link');
-
-  dropdownLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault(); // prevent "#" jump
-
-      // Close all open dropdowns first
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        if (menu !== link.nextElementSibling) {
-          menu.style.display = 'none';
-        }
-      });
-
-      // Toggle this dropdown
-      const dropdown = link.nextElementSibling;
-      if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-      } else {
-        dropdown.style.display = 'block';
-      }
-    });
-  });
-
-  // Close dropdown if clicked outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.style.display = 'none';
-      });
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
     }
-  });
+
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(event.target) && dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            }
+        });
+    });
+
+    const dropdownLinks = document.querySelectorAll('.dropdown-link');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const parentItem = this.closest('.nav-item.dropdown');
+            if (parentItem) {
+                parentItem.classList.toggle('active');
+            }
+        });
+    });
+});
