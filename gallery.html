@@ -52,7 +52,7 @@
       </nav>
     </div>
   </header>
-  <link rel="stylesheet" href="css/gallery.css" />
+  
 </head>
 <body>
   <div class="filter-bar">
@@ -118,15 +118,11 @@
   }
 ];
 
-// Sort by brand
 cars.sort((a, b) => a.brand.localeCompare(b.brand));
 
-// DOM elements
 const gallery = document.getElementById("carGallery");
 const brandSelect = document.getElementById("brandSelect");
 const yearSelect = document.getElementById("yearSelect");
-
-// Populate filters
 const brands = ["All", ...new Set(cars.map(car => car.brand))];
 const years = ["All", ...new Set(cars.map(car => car.year))];
 

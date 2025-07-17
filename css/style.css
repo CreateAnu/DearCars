@@ -161,7 +161,10 @@ body {
 .footer-logo {
   white-space: nowrap;
 }
-
+.flex-container2{
+  display: flex;
+  justify-content: center;
+}
 .hamburger-wrap {
     display: none;
 }
@@ -169,8 +172,6 @@ body {
     display: flex;
     flex-direction: row;
 }
-
-
 @media (max-width: 768px) {
     .flex-container {
         justify-content: space-between;
