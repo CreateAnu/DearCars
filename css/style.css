@@ -9,13 +9,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Audiowide", sans-serif;
-  background-color: #000;
   color: white;
 }
 
 
 .hero-box {
-  background-color: #000;
+  background-color: #1a1206;
   padding: 1rem 2rem;
 }
 .hero-text-box {

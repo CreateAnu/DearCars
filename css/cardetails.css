@@ -6,7 +6,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             padding: 20px;
-            background-color: black;
+            background-color: #1a1206;
     
 }
 .carousel-inner img {
