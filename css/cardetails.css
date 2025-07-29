@@ -1,120 +1,143 @@
-*{
-    margin: 0%;
-    padding: 0%;
-}
-.container{display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            padding: 20px;
-            background-color: #1a1206;
-    
-}
-.carousel-inner img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
+#carDetailContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #333;
 }
 
-.carousel-control span{
+.filter-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.filter-button {
+    background-color: #555;
+    color: white;
+    padding: 8px 15px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #777;
+}
+
+.filter-button.active {
+    background-color: gold;
+    color: black;
+    border-color: gold;
+}
+
+#myCarousel {
+  width: 100%;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-control span {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 50%;
 }
-.flex-container2 {
-    display: flex;
-    justify-content: center;
+
+.info-section {
+  width: 100%;
+  color: white;
 }
 
-.hamburger-wrap {
-    display: none;
+.info-section h2 {
+  color: gold;
+  margin-bottom: 15px;
+  font-size: 2em;
 }
 
-.flex-container2 {
+.info-section p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.info-section strong {
+  color: #ccc;
+}
+
+.action-buttons {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid gold;
+    background: transparent;
+    color: gold;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+.action-button:hover {
+    background: gold;
+    color: black;
+}
+
+.action-button.rent {
+    background-color: orange;
+    color: white;
+    border-color: orange;
+}
+
+.action-button.rent:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+@media (min-width: 769px) {
+  #carDetailContent {
     flex-direction: row;
-}
+    align-items: flex-start;
+    padding: 40px;
+  }
 
-@media (max-width: 768px) {
-    .flex-container {
-        justify-content: space-between;
-        align-items: center;
-    }
+  .filter-buttons {
+      width: 60%;
+  }
 
-    .hamburger-wrap {
-        display: block;
-        text-align: right;
-        padding: 10px;
-    }
+  #myCarousel {
+    width: 60%;
+  }
 
-    .hamburger-btn {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-        padding: 5px 10px;
-    }
+  .carousel-inner img {
+    height: 450px;
+  }
 
-    .flex-container2 {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 130px;
-        left: 0;
-        background-color: #333;
-        z-index: 1000;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
+  .info-section {
+    width: 38%;
+    padding-left: 30px;
+  }
 
-    .flex-container2.active {
-        display: flex;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-item {
-        text-align: center;
-        width: 100%;
-        border-bottom: 1px solid #555;
-    }
-
-    .nav-item:last-child {
-        border-bottom: none;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 15px 0;
-        color: gold;
-        text-decoration: none;
-    }
-
-    
-
-    .dropdown-menu {
-        display: none;
-        position: static;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
-        padding-left: 20px;
-        box-shadow: none;
-    }
-
-    .nav-item.dropdown.active .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-icon {
-        transform: rotate(0deg);
-        transition: transform 0.3s ease;
-    }
-
-    .nav-item.dropdown.active .dropdown-icon {
-        transform: rotate(180deg);
-    }
+  .action-buttons {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 20px;
+  }
 }
