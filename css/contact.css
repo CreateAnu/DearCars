@@ -45,6 +45,7 @@ html, body {
 }
 
 label {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: block;
   margin-bottom: 6px;
   font-weight: 500;

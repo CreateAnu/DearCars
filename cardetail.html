@@ -25,57 +25,42 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/cardetails.css" />
-    <title>Big Cars - Car Details</title>
+    <title>Big Cars</title>
   </head>
   <body class="hero-body">
   <header class="hero-box">
     <div class="flex-container"> 
       <div class="logo">
-        <img src="img/High Wheels.png" alt="High Wheels Logo" />
+        <img src="/img/High Wheels.png" alt="Logo" />
       </div>
       <div class="icons">
-        <i class="fa-solid fa-phone"></i> +91 9167305752
-        <i class="fa-solid fa-location-dot"></i> Location
+        <i class="fa-solid fa-phone"> +91 9167305752</i>
+        <i class="fa-solid fa-location-dot"> Location</i>
       </div>
     </div>
     <div class="hamburger-wrap">
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">&#9776;</button>
+      <button class="hamburger-btn" id="hamburgerBtn">&#9776;</button>
     </div>
     <div class="flex-container2" id="navMenu">
       <nav class="menu">
         <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="carpage.html" class="nav-link">Inventory</a></li>
-          <li class="nav-item"><a href="gallery.html" class="nav-link">Models</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-link">Events <i class="bx bx-chevron-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="#" class="nav-link">Recent Jobs</a></li>
-              <li><a href="#" class="nav-link">Best Jobs</a></li>
-              <li><a href="#" class="nav-link">Work Awards</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Inventory</a></li>
+          <li class="nav-item"><a href="carousel.html" class="nav-link">Models</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Company Info</a></li>
+          <li class="nav-item"><a href="company.html" class="nav-link">Company Info</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  
+ 
   <main class="content-wrap">
     <div id="loadingMessage" style="text-align: center; padding: 20px;">Loading car details...</div>
-    <div id="errorMessage" style="text-align: center; padding: 20px; color: red; display: none;">Car not found.</div>
-    
+    <div id="errorMessage" style="text-align: center; padding: 20px; color: red; display: none;">Car not found.</div>  
     <div id="carDetailContent" style="display: none;">
       <div id="myCarousel" class="carousel slide carousel-half" data-ride="carousel">
-        <ol class="carousel-indicators" id="carouselIndicators">
-          
-        </ol>
-
-        <div class="carousel-inner" id="carouselInner">
-          
-        </div>
-
+        <ol class="carousel-indicators" id="carouselIndicators"></ol>
+        <div class="carousel-inner" id="carouselInner"></div>
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
@@ -83,7 +68,6 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
       </div>
-
       <div class="info-section">
         <h2 id="carTitle"></h2>
         <p><strong>Brand:</strong> <span id="carBrand"></span></p>
@@ -99,8 +83,6 @@
       </div>
     </div>
   </main>
-
-
    <footer
       style="
         background-color: black;
@@ -112,7 +94,6 @@
     >
       © 2025 Copyright: High Wheels
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="js/cardetail.js"></script>
