@@ -65,19 +65,16 @@
         <input type="email" name="email" required />
       </div>
 
-      <div class="form-group">
-        <label>Phone</label>
-        <div style="display: flex;">
-          <select name="countryCode" style="margin-right: 5px;">
-            <option value="+1">+1 (USA)</option>
-            <option value="+44">+44 (UK)</option>
-            <option value="+91">+91 (India)</option>
-            <option value="+61">+61 (Australia)</option>
-            <option value="+49">+49 (Germany)</option>
-          </select>
-          <input type="tel" name="phone" style="flex: 1;" required />
-        </div>
-      </div>
+     <div class="form-group">
+     <label for="phoneInput">Phone</label>
+       <div style="display: flex; gap: 10px;"> <select name="countryCode" id="countryCodeSelect" style="flex: 0 0 30%;"> <option value="+1">+1 (USA)</option>
+       <option value="+44">+44 (UK)</option>
+       <option value="+91">+91 (India)</option>
+       <option value="+61">+61 (Australia)</option>
+       <option value="+49">+49 (Germany)</option>
+     </select>
+     <input type="tel" name="phone" id="phoneInput" style="flex: 1;" required /> </div>
+     </div>
 
       <div class="form-group">
         <label>City</label>
@@ -100,9 +97,18 @@
       </div>
 
       <button type="submit" class="btn">Send</button>
-      <p class="text-sm mt-2">Status message here...</p>
+   
     </form>
   </div>
+   <footer style="
+    background-color: black;
+    padding: 1.4rem;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+  ">
+    © 2025 Copyright: High Wheels
+  </footer>
   <script src="/js/menumove.js"></script>
 </body>
 </html>

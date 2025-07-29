@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/glightbox.min.css" />
-    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,35 +18,33 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/cardetails.css" />
-    <title>Big Cars</title>
+    <title>Big Cars - Car Details</title>
   </head>
   <body class="hero-body">
   <header class="hero-box">
     <div class="flex-container"> 
       <div class="logo">
-        <img src="/img/High Wheels.png" alt="Logo" />
+        <img src="img/High Wheels.png" alt="High Wheels Logo" />
       </div>
       <div class="icons">
-        <i class="fa-solid fa-phone"> +91 9167305752</i>
-        <i class="fa-solid fa-location-dot"> Location</i>
+        <i class="fa-solid fa-phone"></i> +91 9167305752
+        <i class="fa-solid fa-location-dot"></i> Location
       </div>
     </div>
     <div class="hamburger-wrap">
-      <button class="hamburger-btn" id="hamburgerBtn">&#9776;</button>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">&#9776;</button>
     </div>
     <div class="flex-container2" id="navMenu">
       <nav class="menu">
         <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="carpage.html" class="nav-link">Inventory</a></li>
           <li class="nav-item"><a href="gallery.html" class="nav-link">Models</a></li>
           <li class="nav-item dropdown">
@@ -63,50 +61,47 @@
       </nav>
     </div>
   </header>
-  <div class="content-wrap">
-    <div id="myCarousel" class="carousel slide carousel-half" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
+  
+  <main class="content-wrap">
+    <div id="loadingMessage" style="text-align: center; padding: 20px;">Loading car details...</div>
+    <div id="errorMessage" style="text-align: center; padding: 20px; color: red; display: none;">Car not found.</div>
+    
+    <div id="carDetailContent" style="display: none;">
+      <div id="myCarousel" class="carousel slide carousel-half" data-ride="carousel">
+        <ol class="carousel-indicators" id="carouselIndicators">
+          
+        </ol>
 
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/2/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 1" />
+        <div class="carousel-inner" id="carouselInner">
+          
         </div>
-        <div class="item">
-          <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/4/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 2" />
-        </div>
-        <div class="item">
-          <img src="https://www.lamborghinigoldcoast.com/imagetag/7270/5/l/Used-2019-Lamborghini-Urus-1740764142.jpg" alt="Slide 3" />
-        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
       </div>
 
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
+      <div class="info-section">
+        <h2 id="carTitle"></h2>
+        <p><strong>Brand:</strong> <span id="carBrand"></span></p>
+        <p><strong>Description:</strong> <span id="carDescription"></span></p>
+        <p><strong>Engine:</strong> <span id="carEngine"></span></p>
+        <p><strong>Transmission:</strong> <span id="carTransmission"></span></p>
+        <p><strong>Horsepower:</strong> <span id="carHorsepower"></span></p>
+        <p><strong>0–60 mph:</strong> <span id="carZeroToSixty"></span></p>
+        <p><strong>Year:</strong> <span id="carYear"></span></p>
+        <p><strong>Model:</strong> <span id="carModel"></span></p>
+        <p><strong>Top Speed:</strong> <span id="carTopSpeed"></span></p>
+        <p><strong>Price:</strong> <span id="carPrice"></span></p>
+      </div>
     </div>
+  </main>
 
-    <div class="info-section">
-      <h2>2019 Lamborghini Urus</h2>
-      <p><strong>Brand:</strong> Lamborghini</p>
-      <p><strong>Description:</strong> A high-performance luxury SUV combining Lamborghini's signature design with everyday practicality.</p>
-      <p><strong>Engine:</strong> 4.0L Twin-Turbo V8</p>
-      <p><strong>Transmission:</strong> 8-Speed Automatic</p>
-      <p><strong>Horsepower:</strong> 641 HP</p>
-      <p><strong>0–60 mph:</strong> 3.6 sec</p>
-      <p><strong>Year:</strong> 2019</p>
-      <p><strong>Model:</strong> Urus</p>
-      <p><strong>Top Speed:</strong> 190 mph</p>
-      <p><strong>Price:</strong> $200,000</p>
-    </div>
-  </div>
 
-  <footer
+   <footer
       style="
         background-color: black;
         padding: 1.4rem;
@@ -118,8 +113,9 @@
       © 2025 Copyright: High Wheels
     </footer>
 
-    <script src="/js/menumove.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/cardetail.js"></script>
+    <script src="js/menumove.js"></script>
   </body>
 </html>

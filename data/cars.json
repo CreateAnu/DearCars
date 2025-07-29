@@ -1,0 +1,108 @@
+[
+  {
+    "id": "car001",
+    "brand": "Lamborghini",
+    "year": 2019,
+    "title": "2019 Lamborghini Urus",
+    "desc": "Luxury SUV with performance.",
+    "thumbnail": "https://www.lamborghinigoldcoast.com/imagetag/7270/2/l/Used-2019-Lamborghini-Urus-1740764142.jpg",
+    "details": {
+      "engine": "4.0L Twin-Turbo V8",
+      "transmission": "8-Speed Automatic",
+      "horsepower": "641 HP",
+      "zeroToSixty": "3.6 sec",
+      "model": "Urus",
+      "topSpeed": "190 mph",
+      "price": "$200,000",
+      "images": [
+        "https://www.lamborghinigoldcoast.com/imagetag/7270/2/l/Used-2019-Lamborghini-Urus-1740764142.jpg",
+        "https://www.lamborghinigoldcoast.com/imagetag/7270/4/l/Used-2019-Lamborghini-Urus-1740764142.jpg",
+        "https://www.lamborghinigoldcoast.com/imagetag/7270/5/l/Used-2019-Lamborghini-Urus-1740764142.jpg"
+      ]
+    }
+  },
+  {
+    "id": "car002",
+    "brand": "Ferrari",
+    "year": 2021,
+    "title": "2021 Ferrari Roma",
+    "desc": "Timeless design meets modern performance.",
+    "thumbnail": "https://www.lamborghinigoldcoast.com/imagetag/11820/2/l/Used-2021-Ferrari-Roma-1746293442.jpg",
+    "details": {
+      "engine": "3.9L Twin-Turbo V8",
+      "transmission": "8-Speed Dual-Clutch",
+      "horsepower": "612 HP",
+      "zeroToSixty": "3.4 sec",
+      "model": "Roma",
+      "topSpeed": "199 mph",
+      "price": "$222,620",
+      "images": [
+        "https://www.lamborghinigoldcoast.com/imagetag/11820/2/l/Used-2021-Ferrari-Roma-1746293442.jpg",
+        "https://www.lamborghinigoldcoast.com/imagetag/11820/3/l/Used-2021-Ferrari-Roma-1746293442.jpg"
+      ]
+    }
+  },
+  {
+    "id": "car003",
+    "brand": "Mercedes",
+    "year": 2021,
+    "title": "2021 Mercedes-Benz G-Class AMG G 63",
+    "desc": "Luxury off-road SUV with AMG power.",
+    "thumbnail": "https://www.lamborghinigoldcoast.com/imagetag/11333/2/l/Used-2021-Mercedes-Benz-G-Class-AMG-G-63-1741812758.jpg",
+    "details": {
+      "engine": "4.0L Twin-Turbo V8",
+      "transmission": "9-Speed Automatic",
+      "horsepower": "577 HP",
+      "zeroToSixty": "4.5 sec",
+      "model": "AMG G 63",
+      "topSpeed": "149 mph",
+      "price": "$179,000",
+      "images": [
+        "https://www.lamborghinigoldcoast.com/imagetag/11333/2/l/Used-2021-Mercedes-Benz-G-Class-AMG-G-63-1741812758.jpg",
+        "https://www.lamborghinigoldcoast.com/imagetag/11333/3/l/Used-2021-Mercedes-Benz-G-Class-AMG-G-63-1741812758.jpg"
+      ]
+    }
+  },
+  {
+    "id": "car004",
+    "brand": "Rolls-Royce",
+    "year": 2020,
+    "title": "2020 Rolls-Royce Phantom",
+    "desc": "Ultimate luxury sedan.",
+    "thumbnail": "https://www.lamborghinigoldcoast.com/imagetag/9515/2/l/Used-2020-Rolls-Royce-Phantom-1707862837.jpg",
+    "details": {
+      "engine": "6.75L Twin-Turbo V12",
+      "transmission": "8-Speed Automatic",
+      "horsepower": "563 HP",
+      "zeroToSixty": "5.3 sec",
+      "model": "Phantom",
+      "topSpeed": "155 mph",
+      "price": "$450,000",
+      "images": [
+        "https://www.lamborghinigoldcoast.com/imagetag/9515/2/l/Used-2020-Rolls-Royce-Phantom-1707862837.jpg",
+        "https://www.lamborghinigoldcoast.com/imagetag/9515/3/l/Used-2020-Rolls-Royce-Phantom-1707862837.jpg"
+      ]
+    }
+  },
+  {
+    "id": "car005",
+    "brand": "Bentley",
+    "year": 2020,
+    "title": "2020 Bentley Continental GT W12",
+    "desc": "A luxury grand tourer.",
+    "thumbnail": "https://www.lamborghinigoldcoast.com/imagetag/10595/2/l/Used-2020-Bentley-Continental-GT-GT-W12-1740766143.jpg",
+    "details": {
+      "engine": "6.0L Twin-Turbo W12",
+      "transmission": "8-Speed Dual-Clutch",
+      "horsepower": "626 HP",
+      "zeroToSixty": "3.7 sec",
+      "model": "Continental GT W12",
+      "topSpeed": "207 mph",
+      "price": "$250,000",
+      "images": [
+        "https://www.lamborghinigoldcoast.com/imagetag/10595/2/l/Used-2020-Bentley-Continental-GT-GT-W12-1740766143.jpg",
+        "https://www.lamborghinigoldcoast.com/imagetag/10595/3/l/Used-2020-Bentley-Continental-GT-GT-W12-1740766143.jpg"
+      ]
+    }
+  }
+]
